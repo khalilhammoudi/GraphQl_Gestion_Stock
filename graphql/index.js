@@ -3,11 +3,11 @@ const typeDefs = require('./Routes/typeDefs');
 const resolvers = require('./Routes/Resolvers');
 
 
-// The ApolloServer constructor requires two parameters: your schema
-// definition and your set of resolvers.
+// Le constructeur d'ApolloServer nécessite 2 paramètres : le schéma définie
+// et l'ensemble de résolveurs
 const server = new ApolloServer({ typeDefs, resolvers });
 
-// The `listen` method launches a web server.
+// La méthode 'Listen' lance le serveur web
 server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
 });
